@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>OnClass</title>
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="/css/all.css">
+</head>
+
+<body>
+    <header class="top">
+        <input type="image" src="/assets/images/logo.svg">
+        <a href="/">
+            <input class="logout"type="image" src="/assets/images/logout.svg">
+        </a>
+    </header>
+    <main>
+        <video id="video" autoplay> </video>
+        <div class="buttons">
+            <input type="button" value="" id="stopvideo">
+            <input type="button" value="" id="pausevideo">
+        </div>
+    </main>
+    <footer class="bottom">
+        <p class="text"> Criado por Matheus Simão Schmidt</p>
+    </footer>
+    <script>
+        // Grab elements, create settings, etc.
+        var video = document.getElementById('video');
+        var novideo = document.getElementById('novideo');
+        // Get access to the camera!
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            // Not adding `{ audio: true }` since we only want video now
+            navigator.mediaDevices.getUserMedia({ video: true }, { audio:true}).then(function (stream) {
+                //video.src = window.URL.createObjectURL(stream);
+                video.srcObject = stream;
+                video.play();
+            });
+        }else if(navigator.getUserMedia) { // Standard
+            navigator.getUserMedia({ video: true }, function(stream) {
+                video.src = stream;
+                video.play();
+            }, errBack);
+        }
+        document.getElementById("novideo").addEventListener("click", function() {
+            navigator.getUserMedia({ video: false }, function(stream) {
+                video.src = stream;
+                video.play();
+        });
+        /* Legacy code below: getUserMedia
+        else if(navigator.getUserMedia) { // Standard
+            navigator.getUserMedia({ video: true }, function(stream) {
+                video.src = stream;
+                video.play();
+            }, errBack);
+        } else if(navigator.webkitGetUserMedia) { // WebKit-prefixed
+            navigator.webkitGetUserMedia({ video: true }, function(stream){
+                video.src = window.webkitURL.createObjectURL(stream);
+                video.play();
+            }, errBack);
+        } else if(navigator.mozGetUserMedia) { // Mozilla-prefixed
+            navigator.mozGetUserMedia({ video: true }, function(stream){
+                video.srcObject = stream;
+                video.play();
+            }, errBack);
+        */
+        });
+    </script>
+</body>
+
+</html>
