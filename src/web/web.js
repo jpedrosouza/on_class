@@ -21,6 +21,10 @@ app.get('/cadastro', (req, res) => {
     return res.render('cadastro');
 });
 
+app.get('/codigo-turma', (req, res) => {
+    return res.render('codigo_turma', { login_status: 'false' });
+});
+
 app.get('/logado-aluno', (req, res) => {
     return res.render('logado_aluno');
 });

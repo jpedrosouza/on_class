@@ -1,28 +1,30 @@
-main{
+main {
     flex-direction: column;
     overflow: auto;
     position: relative;
     padding: 0 0 2% 0;
 }
+
+
 /* ::-webkit-scrollbar {
     width: 0px;
 } */
 
-::-webkit-scrollbar-track{
-	background-color: #c8c8c8;
+::-webkit-scrollbar-track {
+    background-color: #c8c8c8;
 }
 
-::-webkit-scrollbar{
-	width: 7px;
-	background-color: #c8c8c8;
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #c8c8c8;
 }
 
-::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	background-color: #808080;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #808080;
 }
 
-.listaSalas { 
+.listaSalas {
     margin-top: 2%;
     margin-bottom: 2%;
     position: absolute;
@@ -36,13 +38,15 @@ main{
     justify-content: center;
     padding: 0 5% 5% 0;
 }
+
 h1 {
     font-weight: 500;
     color: #ffffff;
     cursor: default;
 }
-.go{
-    background-image: url(/imagens/salas.jpg);
+
+.go {
+    background-image: url(/assets/images/salas.jpg);
     background-position: 50px 0px;
     width: 300px;
     height: 100px;
@@ -55,17 +59,20 @@ h1 {
     box-sizing: border-box;
     border: none;
 }
-.nome{
+
+.nome {
     font-size: 35px;
     font-weight: bold;
     color: #000000;
 }
-.professor{
+
+.professor {
     font-size: 20px;
     font-weight: bold;
     color: #000000;
 }
-.sala{
+
+.sala {
     width: 300px;
     height: 100px;
     margin: 5% 0 0 5%;

@@ -4,6 +4,7 @@ const session = require('express-session');
 
 const app = express();
 
+const db = require('./src/database/database');
 const routes = require('./src/routes/routes');
 
 app.use(session({ secret: 'secret', resave: true, saveUninitialized: true }));
@@ -18,6 +19,8 @@ app.use('/', routes);
 const server = app.listen(8080, () => {
     const host = server.address().address;
     const port = server.address().port;
+
+    db.sequelize.sync();
 
     console.log(`Server listening at https://${host}:${port}`);
 });

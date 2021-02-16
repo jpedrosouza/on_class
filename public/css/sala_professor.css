@@ -1,17 +1,18 @@
-:-webkit-scrollbar-track{
-	background-color: #BEBEBE;
+:-webkit-scrollbar-track {
+    background-color: #BEBEBE;
 }
 
-::-webkit-scrollbar{
-	width: 7px;
-	background-color: #BEBEBE;
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #BEBEBE;
 }
 
-::-webkit-scrollbar-thumb{
-	border-radius: 10px;
-	background-color: #808080;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #808080;
 }
-.sala { 
+
+.sala {
     width: 85%;
     height: 95%;
     background: #BEBEBE;
@@ -25,69 +26,81 @@
     font-weight: bold;
     overflow: auto;
 }
-.linha{
+
+.linha {
     position: fixed;
     top: 15%;
     width: 3px;
     height: 70%;
     background: #4d4d4d;
 }
-.materiais{
+
+.materiais {
     width: 50%;
     height: 100%;
     box-sizing: border-box;
 }
-.Video{
+
+.Video {
     display: flex;
     margin-bottom: 2%;
     align-items: center;
 }
-.tempo{
+
+.tempo {
     color: #ffffff;
     margin-left: auto;
     margin-right: 3%;
 }
-.data{
+
+.data {
     margin-left: auto;
     color: #ffffff;
 }
-.prova{
+
+.prova {
     align-items: center;
     margin-bottom: 2%;
     display: flex;
 }
-.Listaprovas{
+
+.Listaprovas {
     padding-left: 3%;
     width: 50%;
     height: auto;
     box-sizing: border-box;
 }
+
 h1 {
     font-weight: 500;
     color: #ffffff;
     cursor: default;
 }
-.buttons{
+
+.buttons {
     display: flex;
     flex-direction: column;
 }
-.buttons input{
+
+.buttons input {
     cursor: pointer;
     border: none;
     margin: 1em;
     border-radius: 50%;
     height: 4em;
     width: 4em;
-    background:  #376E36;
+    background: #376E36;
 }
-#prova{
-    background-image: url(/imagens/adicionar-ficheiro.svg);
+
+#prova {
+    background-image: url(/assets/images/adicionar-ficheiro.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 3em;
 }
-#video{
-    background-image: url(/imagens/adicionar-video.svg);
+
+#video {
+    background-image: url(/assets/images/adicionar-video.svg);
     background-size: 30em;
     background-repeat: no-repeat;
     background-position: center;
@@ -98,13 +111,16 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: #c8c8c8;
-    box-shadow: 1px 5px 5px 5px rgba(0,0,0,0.4);
-    margin: auto; /* 15% from the top and centered */
+    box-shadow: 1px 5px 5px 5px rgba(0, 0, 0, 0.4);
+    margin: auto;
+    /* 15% from the top and centered */
     padding: 20px;
     height: 35rem;
-    width: 50rem; /* Could be more or less, depending on screen size */
+    width: 50rem;
+    /* Could be more or less, depending on screen size */
 }
-.modal-header{
+
+.modal-header {
     color: #376E36;
     flex-grow: 1;
     display: flex;
@@ -112,6 +128,7 @@ h1 {
     flex-direction: column;
     padding-bottom: 10px;
 }
+
 .modal-body input[type=text] {
     background: #d1d1d1;
     color: #626262;
@@ -122,19 +139,23 @@ h1 {
     height: 2em;
     margin-bottom: 10px;
 }
-.modal-body{
+
+.modal-body {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-grow: 2;
 }
-.modal-footer{
+
+.modal-footer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-grow: 1;
 }
-.close, .create {
+
+.close,
+.create {
     border-radius: 5px;
     border: none;
     color: #ffffff;
@@ -144,16 +165,21 @@ h1 {
     width: 20%;
     margin: 10px;
 }
-.close:hover,.create:hover,
-.close:focus,.create:focus {
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
+
+.close:hover,
+.create:hover,
+.close:focus,
+.create:focus {
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
 }
-.modal-header h1{
+
+.modal-header h1 {
     flex-grow: 1;
 }
-.add{
+
+.add {
     height: 3em;
     width: 4em;
     cursor: pointer;
@@ -162,24 +188,28 @@ h1 {
     color: #ffffff;
     border-radius: 10px;
 }
-.questoes{
+
+.questoes {
     display: flex;
     flex-grow: 1;
     width: 50%;
 }
-.qtdquestoes{
+
+.qtdquestoes {
     align-items: center;
     display: flex;
     width: 100%;
     height: 100%;
 }
-.questao{
+
+.questao {
     margin-right: 2px;
     border-radius: 50%;
     background: #376E36;
     height: 20px;
     width: 20px;
 }
+
 textarea {
     color: #626262;
     border: none;
@@ -192,13 +222,16 @@ textarea {
     padding: 5px;
     flex-grow: 2;
 }
-textarea:hover{
+
+textarea:hover {
     transform: scale(1.1);
 }
-.pergunta{
+
+.pergunta {
     display: flex;
     align-items: center;
 }
+
 .tipo {
     flex-grow: 1;
     position: relative;
@@ -208,10 +241,12 @@ textarea:hover{
     box-sizing: border-box;
     margin-left: 10px;
 }
-.tipo:hover .dropdown{
+
+.tipo:hover .dropdown {
     display: flex;
 }
-.tipo button{
+
+.tipo button {
     width: 100%;
     padding: 10px;
     font-size: 1em;
@@ -220,34 +255,37 @@ textarea:hover{
     background: #376E36;
     border: none;
 }
-.dropdown{
+
+.dropdown {
     position: absolute;
     z-index: 2;
     display: none;
     flex-direction: column;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     width: 100%;
 }
 
-.dropdown input{
+.dropdown input {
     width: 100%;
     padding: 5px;
-    background:rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     color: #ffffff;
     border: none;
     cursor: pointer;
-
 }
-.dropdown input:hover{
+
+.dropdown input:hover {
     transform: none;
     text-transform: uppercase;
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
     margin-right: 50px;
 }
-.alternativa{
+
+.alternativa {
     width: 100%;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
