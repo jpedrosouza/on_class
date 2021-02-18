@@ -3,6 +3,7 @@ module.exports = (sequelize, DataType) => {
         'nome': DataType.STRING,
         'email': DataType.STRING,
         'professor': DataType.BOOLEAN,
+        'password_hash': DataType.STRING,
         'password_salt': DataType.STRING
     });
 

@@ -4,9 +4,9 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/../../public')));
+app.use(express.static(path.join(__dirname, '/../../../public')));
 app.engine('.hbs', handlebars({ extname: '.hbs', defaultLayout: false }));
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/../../views');
 app.set('view engine', '.hbs');
 
 app.get('/', (req, res) => {
@@ -22,7 +22,15 @@ app.get('/cadastro', (req, res) => {
 });
 
 app.get('/codigo-turma', (req, res) => {
-    return res.render('codigo_turma', { login_status: 'false' });
+    var loginStatus = false;
+
+    if (req.session.loggedin) {
+        loginStatus = true;
+    } else {
+        loginStatus = false;
+    }
+
+    return res.render('codigo_turma', { login_status: loginStatus });
 });
 
 app.get('/logado-aluno', (req, res) => {

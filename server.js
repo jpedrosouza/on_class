@@ -20,7 +20,7 @@ const server = app.listen(8080, () => {
     const host = server.address().address;
     const port = server.address().port;
 
-    db.sequelize.sync();
+    // db.sequelize.sync({ force: true });
 
     console.log(`Server listening at https://${host}:${port}`);
 });

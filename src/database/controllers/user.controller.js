@@ -2,9 +2,10 @@ const db = require('../database');
 
 exports.createUser = (user) => {
     db.users.create({
-            'nome': user.nome,
+            'nome': user.name,
             'email': user.email,
-            'professor': user.professor,
+            'professor': user.teacher,
+            'password_hash': user.password_hash,
             'password_salt': user.password_salt
         })
         .then((user) => {
@@ -21,5 +22,13 @@ exports.getUserByPk = (user) => {
         where: {
             id: user.id,
         },
+    });
+}
+
+exports.getUserByEmail = (user) => {
+    return db.users.findAll({
+        where: {
+            email: user.email
+        }
     });
 }
